@@ -1,0 +1,42 @@
+let navbar = document.getElementById("navbar");
+console.log(navbar);
+console.log(navbar.childNodes);
+Array.from(navbar.childNodes).forEach(element => {
+    console.log(element);
+});
+console.log(navbar.children);
+Array.from(navbar.children).forEach(element => {
+    console.log(element);
+});
+navbar.style.backgroundColor = "lime";
+// navbar.setAttribute("data-w3-color", "cmyk(100%, 260%, 20%, 45%)");
+// console.log(getComputedStyle(navbar).getPropertyValue("background-color"));
+console.log(getComputedStyle(navbar).backgroundColor);
+// navbar.removeAttribute("id");
+console.log(navbar.attributes.item("class"));
+console.log(navbar.firstElementChild.nextElementSibling.children[0].firstChild);
+console.log(navbar.firstElementChild.nextElementSibling.children[1].firstChild);
+console.log(navbar.firstElementChild.nextElementSibling.children[2].firstChild);
+console.log(navbar.firstElementChild.nextElementSibling.children[3].firstChild);
+navbar.firstElementChild.setAttribute("target", "_blank");
+
+let centerElement = document.getElementById("center");
+let spanElement = document.getElementById("spanElement");
+let inputTextElement = document.createElement("input");
+inputTextElement.type = "text";
+spanElement.style.border = "1px solid black";
+centerElement.addEventListener("click", function () {
+    inputTextElement.value = spanElement.innerText;
+    if (centerElement.hasChildNodes(spanElement) == true) {
+        centerElement.replaceChild(inputTextElement, spanElement);
+    }
+}, true);
+
+centerElement.addEventListener("blur", function () {
+    spanElement.innerText = inputTextElement.value;
+    if (centerElement.hasChildNodes(inputTextElement) == true) {
+        centerElement.replaceChild(spanElement, inputTextElement);
+    }
+}, true);
+
+console.log(centerElement.hasChildNodes(inputTextElement));

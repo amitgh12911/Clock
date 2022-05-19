@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+img{
+    display: block;
+    margin: auto;
+    width: 30vw;
+}
+
+#hhand{
+    border: 3px solid;
+    position: relative;
+    top: 10.5vw;
+    width: 3vw;
+    transform-origin: 0;
+    left: 49.3vw;
+}
+#mhand{
+    border: 2px solid;
+    position: relative;
+    top: 10vw;
+    width: 6vw;
+    transform-origin: 0;
+    left: 49.3vw;
+}
+#shand{
+    border: 1px solid;
+    position: relative;
+    top: 10vw;
+    width: 5vw;
+    transform-origin: 0;
+    left: 49.3vw;
+}
